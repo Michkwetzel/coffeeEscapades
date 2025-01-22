@@ -33,35 +33,30 @@ flutter:
   uses-material-design: true
 
   fonts:
-      - family: Poppins
+      - family: Orbitron
         fonts:
-          - asset: assets/fonts/Poppins/Poppins-Thin.ttf
-            weight: 100
-          - asset: assets/fonts/Poppins/Poppins-ExtraLight.ttf
-            weight: 200
-          - asset: assets/fonts/Poppins/Poppins-Light.ttf
+          - asset: assets/fonts/orbitron/Orbitron-Regular.ttf
             weight: 300
-          - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+          - asset: assets/fonts/orbitron/Orbitron-Medium.ttf
             weight: 400
-          - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+          - asset: assets/fonts/orbitron/Orbitron-SemiBold.ttf
             weight: 500
-          - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+          - asset: assets/fonts/orbitron/Orbitron-Bold.ttf
             weight: 600
-          - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          - asset: assets/fonts/orbitron/Orbitron-ExtraBold.ttf
             weight: 700
-      - family: Mukta
-        fonts:
-          - asset: assets/fonts/Mukta/ekmukta-ExtraLight.ttf
-            weight: 200
-          - asset: assets/fonts/Mukta/ekmukta-Light.ttf
-            weight: 300
-          - asset: assets/fonts/Mukta/ekmukta-Regular.ttf
-            weight: 400
-          - asset: assets/fonts/Mukta/ekmukta-Medium.ttf
-            weight: 500
-          - asset: assets/fonts/Mukta/ekmukta-SemiBold.ttf
-            weight: 600
-          - asset: assets/fonts/Mukta/ekmukta-Bold.ttf
-            weight: 700
-          - asset: assets/fonts/Mukta/ekmukta-ExtraBold.ttf
+          - asset: assets/fonts/orbitron/Orbitron-Black.ttf
             weight: 800
+      - family: Chakra Petch
+        fonts:
+          - asset: assets/fonts/ChakraPetch/ChakraPetch-Regular.ttf
+            weight: 200
+          - asset: assets/fonts/ChakraPetch/ChakraPetch-Medium.ttf
+            weight: 400
+          - asset: assets/fonts/ChakraPetch/ChakraPetch-SemiBold.ttf
+            weight: 500
+          - asset: assets/fonts/ChakraPetch/ChakraPetch-Bold.ttf
+            weight: 600
+   
+  assets:
+    - assets/Flutter_Mike_CV_compressed.pdf

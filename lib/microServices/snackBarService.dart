@@ -5,6 +5,7 @@ class SnackBarService {
       GlobalKey<ScaffoldMessengerState>();
 
   static void showMessage(String message, Color color) {
+    // Global snackbar without needing Context
     scaffoldKey.currentState?.showSnackBar(
       SnackBar(content: Text(message), backgroundColor: color,),
     );

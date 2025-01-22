@@ -1,12 +1,13 @@
 import 'package:coffee_escapades/config/constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomActionButton extends StatelessWidget {
+class customButton extends StatelessWidget {
+  // Custom button with a few customizable parameters
   final VoidCallback? onPressed;
   final String buttonText;
   final Color color;
 
-  const CustomActionButton({
+  const customButton({
     super.key,
     required this.onPressed,
     required this.buttonText,
@@ -30,7 +31,7 @@ class CustomActionButton extends StatelessWidget {
           elevation: onPressed == null ? 0 : 1, 
           child: Text(
             buttonText,
-            style: kCallToActionButtonTextStyle,
+            style: kButtonTextStyle,
           ),
         ),
       ),

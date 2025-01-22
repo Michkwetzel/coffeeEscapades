@@ -1,16 +1,12 @@
-import 'package:coffee_escapades/notifiers/brewingNotifier.dart';
-import 'package:coffee_escapades/components/mainScreen/brewingScreen.dart';
+import 'package:coffee_escapades/components/mainScreen/background/gradientBackground.dart';
 import 'package:coffee_escapades/microServices/snackBarService.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// State management
-final brewingStateProvider = StateNotifierProvider<BrewingNotifier, BrewingState>((ref) {
-  return BrewingNotifier();
-});
-
 //
 class CoffeeTimerApp extends StatelessWidget {
+  const CoffeeTimerApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,11 +15,11 @@ class CoffeeTimerApp extends StatelessWidget {
         primarySwatch: Colors.brown,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BrewingScreen(),
+      home: GradientBackground(),
     );
   }
 }
 
 void main() {
-  runApp(ProviderScope(child: CoffeeTimerApp()));
+  runApp(const ProviderScope(child: CoffeeTimerApp()));
 }
