@@ -4,9 +4,9 @@ import 'package:coffee_escapades/components/mainScreen/components/coffeeMugWidge
 import 'package:coffee_escapades/components/mainScreen/components/topWidget.dart';
 import 'package:coffee_escapades/config/providers.dart';
 import 'package:flutter/material.dart';
-import 'dart:html' as html;
-import 'dart:ui' as ui;  // Add this import
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:html' as html;
+import 'dart:ui_web' as ui_web;
 
 class MainLayout extends ConsumerStatefulWidget {
   MainLayout({super.key});
@@ -21,16 +21,23 @@ class _MainLayoutState extends ConsumerState<MainLayout> {
   final int handleSideWidth = 10;
   
   late html.IFrameElement _iframeElement;
+  final String viewID = 'pdf-viewer-${DateTime.now().millisecondsSinceEpoch}';
 
   @override
   void initState() {
     super.initState();
+    // Initialize iframe
     _iframeElement = html.IFrameElement()
       ..style.border = 'none'
       ..style.height = '100%'
       ..style.width = '100%'
-      // Using PDF.js viewer
-      ..src = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=${Uri.encodeComponent('assets/Flutter_Mike_CV_compressed.pdf')}';
+      ..src = 'assets/Flutter_Mike_CV_compressed.pdf';
+
+    // Register the view
+    ui_web.platformViewRegistry.registerViewFactory(
+      viewID, 
+      (int viewId) => _iframeElement
+    );
   }
 
   @override
@@ -39,23 +46,16 @@ class _MainLayoutState extends ConsumerState<MainLayout> {
 
     return AnimatedSwitcher(
       duration: Duration(milliseconds: 500),
-      child: isBrewingFinished
-          ? _buildPdfViewer()
-          : _buildCoffeeLayout(),
+      child: isBrewingFinished ? _buildPdfViewer() : _buildCoffeeLayout(),
     );
   }
 
   Widget _buildPdfViewer() {
-    // ignore: undefined_prefixed_name
-    ui.platformViewRegistry.registerViewFactory(
-      'pdf-viewer',
-      (int viewId) => _iframeElement,
-    );
-
-    return const SizedBox(
-      width: double.infinity,
-      height: double.infinity,
-      child: HtmlElementView(viewType: 'pdf-viewer'),
+    return Container(
+      color: Colors.white,
+      child: HtmlElementView(
+        viewType: viewID,
+      ),
     );
   }
 
