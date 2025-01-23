@@ -68,5 +68,7 @@ flutter:
             weight: 400
    
   assets:
-    - assets/images/
     - assets/images/flags/
+    - assets/images/fullstack/
+    - assets/images/tools/
+    - assets/images/

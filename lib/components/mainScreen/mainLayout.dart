@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:coffee_escapades/components/buttons/buttonsRow.dart';
+import 'package:coffee_escapades/components/buttons/customButton.dart';
 import 'package:coffee_escapades/components/mainScreen/components/bottomTextWidget.dart';
 import 'package:coffee_escapades/components/mainScreen/components/coffeeMugWidget.dart';
 import 'package:coffee_escapades/components/mainScreen/components/topWidget.dart';
@@ -54,7 +55,7 @@ class _MainLayoutState extends ConsumerState<MainLayout> {
                 ),
               );
             },
-            child: !isBrewingFinished ? cvLayout() : LightSpeedCoffeeLayout(cupColor: cupColor, cupSideWidth: cupSideWidth),
+            child: isBrewingFinished ? cvLayout() : LightSpeedCoffeeLayout(cupColor: cupColor, cupSideWidth: cupSideWidth),
           ),
         ),
       ],
@@ -98,132 +99,271 @@ class cvLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              children: [
-                SelectableText('Michael Wetzel', style: kH1Q),
-                SelectableText('Flutter Developer', style: kH2Q),
-              ],
-            ),
-            SizedBox(
-              width: 40,
-            ),
-            CircleAvatar(
-              radius: 90,
-              backgroundImage: AssetImage('assets/images/profilePick.jpg'),
-            )
-          ],
-        ),
-        SizedBox(
-          height: kBetweenMainSections,
-        ),
-        SizedBox(
-          width: 1300,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ContentCard(
-                    heading: 'General Info:',
-                    child: SizedBox(
-                      width: 500,
-                      child: Column(
-                        spacing: 6,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          HeadingBodyRow(heading: 'Email:', body: 'michkwetzel@gmail.com', hyperLink: true),
-                          HeadingBodyRow(heading: 'Phone:', body: '+27 72 435 8225'),
-                          PassportRow(),
-                          HeadingBodyRow(heading: 'Language:', body: 'English, Afrikaans'),
-                          HeadingBodyRow(heading: 'Location:', body: 'Cape Town but willing to move'),
-                          HeadingBodyRow(heading: 'LinkedIn:', body: 'https://www.linkedin.com/in/michkwetzel/', hyperLink: true),
-                          HeadingBodyRow(heading: 'Github:', body: 'https://github.com/Michkwetzel', hyperLink: true),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(width: 45),
-                      SelectableText("Download CV:", style: kH4QReg),
-                      SizedBox(width: kGeneralSpace),
-                      HyperLinkWidget(body: "CV URL"),
-                    ],
-                  ),
+                  SelectableText('Michael Wetzel', style: kH1Q),
+                  SelectableText('Flutter Developer', style: kH2Q),
                 ],
               ),
-              SizedBox(width: 60),
-              ContentCard(
-                  heading: 'Project Links',
-                  child: SizedBox(
-                    width: 500,
-                    child: Column(
+              SizedBox(
+                width: 40,
+              ),
+              CircleAvatar(
+                radius: 90,
+                backgroundImage: AssetImage('assets/images/profilePick.jpg'),
+              )
+            ],
+          ),
+          SizedBox(
+            height: kBetweenMainSections,
+          ),
+          SizedBox(
+            width: 1300,
+            child: Column(
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SelectableText('TravelBuddy', style: kH4QReg),
-                        SizedBox(height: kBetweenTextSpace),
-                        HyperLinkWidget(body: 'https://travelai-88a07.web.app'),
-                        SizedBox(height: kBetweenPartsofSubSection),
-                        SelectableText('Efficiency-1st', style: kH4QReg),
-                        SizedBox(height: kBetweenTextSpace),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(width: 120, child: SelectableText('Dashboard:', style: kH5QReg)),
-                            Flexible(child: HyperLinkWidget(body: 'https://dashboard-fdda8.web.app')),
-                          ],
+                        SizedBox(
+                          width: 500,
+                          child: ContentCard(
+                            heading: 'General Info:',
+                            child: Column(
+                              spacing: 6,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                HeadingBodyRow(heading: 'Email:', body: 'michkwetzel@gmail.com', hyperLink: true),
+                                HeadingBodyRow(heading: 'Phone:', body: '+27 72 435 8225'),
+                                PassportRow(),
+                                HeadingBodyRow(heading: 'Language:', body: 'English, Afrikaans'),
+                                HeadingBodyRow(heading: 'Location:', body: 'Cape Town but willing to move'),
+                                Row(
+                                  spacing: 32,
+                                  children: [
+                                    customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Github", color: Colors.white),
+                                    customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Linkedin", color: Colors.white),
+                                    customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Download CV", color: Colors.white)
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                         ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(width: 120, child: SelectableText('Survey:', style: kH5QReg)),
-                            Flexible(child: HyperLinkWidget(body: 'https://assessment-909ce.web.app/?token2=test&token1=test')),
-                          ],
-                        ),
-                        SizedBox(height: kBetweenPartsofSubSection),
-                        SelectableText('This Web App', style: kH4QReg),
-                        SizedBox(height: kBetweenTextSpace),
-                        Row(
-                          children: [
-                            SizedBox(
-                                width: 180,
-                                child: SelectableText(
-                                  'Figma Design Files:',
-                                  style: kH5QReg,
-                                )),
-                            HyperLinkWidget(body: 'Changge********'),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(
-                                width: 180,
-                                child: SelectableText(
-                                  'Github Repo:',
-                                  style: kH5QReg,
-                                )),
-                            //TODO: Add here
-                            HyperLinkWidget(body: 'Changge********'),
-                          ],
+                        SizedBox(
+                          height: 20,
                         ),
                       ],
                     ),
-                  ))
-            ],
-          ),
-        )
-      ],
+                    SizedBox(width: 60),
+                    SizedBox(
+                      width: 500,
+                      child: ContentCard(
+                          heading: 'Built by me:',
+                          child: Column(
+                            spacing: 16,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                spacing: 16,
+                                children: [
+                                  SizedBox(width: 160, child: SelectableText('TravelBuddy', style: kH4QReg)),
+                                  customButton(onPressed: () => launchUrl(Uri.parse("https://travelai-88a07.web.app/")), buttonText: "Home", color: Colors.white)
+                                ],
+                              ),
+                              Row(
+                                spacing: 16,
+                                children: [
+                                  SizedBox(width: 160, child: SelectableText('Efficiency-1st', style: kH4QReg)),
+                                  customButton(onPressed: () => launchUrl(Uri.parse("https://dashboard-fdda8.web.app/")), buttonText: "Dashboard", color: Colors.white),
+                                  customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Survey", color: Colors.white)
+                                ],
+                              ),
+                              Row(
+                                spacing: 16,
+                                children: [
+                                  SizedBox(width: 160, child: SelectableText('This Web App', style: kH4QReg)),
+                                  customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Github Repo", color: Colors.white),
+                                  customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Figma", color: Colors.white)
+                                ],
+                              ),
+                            ],
+                          )),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: kBetweenMainSections,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 500,
+                          child: ContentCard(
+                            heading: 'Skills',
+                            child: Column(
+                              spacing: 16,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Full Stack Development',
+                                  style: kH2Q,
+                                ),
+                                SelectableText(
+                                  'Flutter, Dart, Python, Java, Figma',
+                                  style: kH5QReg,
+                                ),
+                                Row(
+                                  spacing: 16,
+                                  children: [
+                                    Image.asset('assets/images/fullstack/flutter.jpg', scale: 0.7),
+                                    Image.asset('assets/images/fullstack/dart.jpg', scale: 0.7),
+                                    Image.asset('assets/images/fullstack/figma.jpg', scale: 0.7),
+                                    Image.asset('assets/images/fullstack/python.jpg', scale: 0.7),
+                                    Image.asset('assets/images/fullstack/java.jpg', scale: 0.7),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 32,
+                        ),
+                        SizedBox(
+                          width: 500,
+                          child: ContentCard(
+                              child: Column(
+                            spacing: 16,
+                            children: [
+                              Text("Google Cloud Architecture", style: kH2Q),
+                              Row(children: [
+                                Image.asset('assets/images/cloud.jpg'),
+                                SizedBox(
+                                  width: kGeneralSpace,
+                                ),
+                                Flexible(
+                                  child: Text('Firestore, Authentication, Firebase Hosting, Google Run, Cloud Functions, Local Emulators', style: kH5QReg),
+                                )
+                              ])
+                            ],
+                          )),
+                        ),
+                        SizedBox(
+                          height: 32,
+                        ),
+                        SizedBox(
+                          width: 500,
+                          child: ContentCard(
+                              child: Column(
+                            spacing: 16,
+                            children: [
+                              Text("End-to-End Product Development", style: kH2Q),
+                              Row(children: [
+                                Flexible(
+                                  child: Text('Product design, UX Design, Product lifecycle', style: kH5QReg),
+                                ),
+                                SizedBox(
+                                  width: kGeneralSpace,
+                                ),
+                                Image.asset('assets/images/cloud.jpg'),
+                              ])
+                            ],
+                          )),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 60,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 500,
+                          child: ContentCard(
+                              heading: 'Education',
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('2017-2022', style: kH5QReg),
+                                  Text('BSc. Engineering in Mechatronics', style: kH2Q),
+                                  Text('University of Cape Town,', style: kH5QReg),
+                                  Text('South Africa', style: kH5QReg),
+                                ],
+                              )),
+                        ),
+                        SizedBox(
+                          height: 32,
+                        ),
+                        SizedBox(
+                          width: 500,
+                          height: 450,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Bootcamps', style: kH2Q,),
+                              SizedBox(height: 32,),
+                              Row(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Flutter Bootcamp', style: kH4QReg),
+                                      SizedBox(height: 4),
+                                      Text('London App Brewery', style: kH5QReg),
+                                      SizedBox(height: 20),
+                                      Text('Intro to Pandas', style: kH4QReg),
+                                      SizedBox(height: 4),
+                                      Text('Kaggle', style: kH5QReg),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 40,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Deeplearning', style: kH4QReg),
+                                      SizedBox(height: 4),
+                                      Text('Coursera', style: kH5QReg),
+                                      SizedBox(height: 20),
+                                      Text('Machine learning', style: kH4QReg),
+                                      SizedBox(height: 4),
+                                      Text('Kaggle', style: kH5QReg),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(width: 1000, child: ContentCard(child: Row()),)
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -261,7 +401,6 @@ class HyperLinkWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SelectableText(
       body,
-      style: kH5QReg.copyWith(color: Colors.blue),
       onTap: () => launchUrl(Uri.parse(body)),
     );
   }
@@ -341,7 +480,7 @@ class ContentCard extends StatelessWidget {
             ],
           )
         : Container(
-            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+            padding: EdgeInsets.symmetric(horizontal: 44, vertical: 32),
             decoration: kContentCards,
             child: child,
           );

@@ -20,6 +20,9 @@ const kH1Q = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w400, fontS
 
 const kH2Q = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w400, fontSize: 28, color: Colors.black);
 
+const kH2QLight = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w200, fontSize: 28, color: Colors.black);
+
+
 const kH3QThin = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w200, fontSize: 23);
 
 const kH3QReg = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w400, fontSize: 23);
