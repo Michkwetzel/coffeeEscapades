@@ -1,6 +1,6 @@
 # coffee_escapades
 
-idea, design and building of this took me roughly 2 days. 
+Idea, design and building of this took me roughly 2 days. 
 
 Flaws: Code is not responsive, doesnt work on mobile and not organized so well.
 
