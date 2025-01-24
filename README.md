@@ -1,16 +1,9 @@
 # coffee_escapades
 
-A new Flutter project.
+idea, design and building of this took me roughly 2 days. 
 
-## Getting Started
+Flaws: Code is not responsive, doesnt work on mobile and not organized so well.
 
-This project is a starting point for a Flutter application.
+However: I am currently on a project timeline so can not give this anymore time. Hope it conveyed that I can code though
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Thanks!
