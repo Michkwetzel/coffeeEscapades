@@ -10,8 +10,13 @@ const kBottomWidgetTextStyle = TextStyle(fontFamily: "Chakra Petch", fontWeight:
 
 const kTopWidgetTextStyle = TextStyle(fontFamily: "Orbitron", fontWeight: FontWeight.w600, fontSize: 17);
 
-//******************************************************************************************
-//******************************************************************************************
+//*********************************************Colors**********************************************
+
+const Color kCupColor = Color(0xFF336334);
+const double kCupSideWidth = 4;
+const int kHandleSideWidth = 10;
+
+
 // CV
 
 //********************************************Text Styles**********************************************
@@ -21,7 +26,6 @@ const kH1Q = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w400, fontS
 const kH2Q = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w400, fontSize: 28, color: Colors.black);
 
 const kH2QLight = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w200, fontSize: 28, color: Colors.black);
-
 
 const kH3QThin = TextStyle(fontFamily: "Qualion", fontWeight: FontWeight.w200, fontSize: 23);
 
