@@ -35,7 +35,6 @@ class _MainLayoutState extends ConsumerState<MainLayout> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(height: 40),
-        TopWidget(),
         Expanded(
           child: AnimatedSwitcher(
             duration: Duration(milliseconds: 800),
@@ -55,7 +54,7 @@ class _MainLayoutState extends ConsumerState<MainLayout> {
                 ),
               );
             },
-            child: !isBrewingFinished ? cvLayout() : LightSpeedCoffeeLayout(cupColor: cupColor, cupSideWidth: cupSideWidth),
+            child: isBrewingFinished ? cvLayout() : LightSpeedCoffeeLayout(cupColor: cupColor, cupSideWidth: cupSideWidth),
           ),
         ),
       ],
@@ -80,6 +79,7 @@ class LightSpeedCoffeeLayout extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          TopWidget(),
           const SizedBox(height: 40),
           CoffeeMugWidget(cupColor: cupColor, cupSideWidth: cupSideWidth),
           const SizedBox(height: 20),
@@ -103,6 +103,7 @@ class cvLayout extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          TopWidget(),
           NameAndProfilePickWIdget(),
           SizedBox(height: kBetweenMainSections),
           SizedBox(
@@ -551,7 +552,7 @@ class NameAndProfilePickWIdget extends StatelessWidget {
         ),
         SizedBox(width: 40),
         CircleAvatar(
-          radius: 90,
+          radius: 100,
           backgroundImage: AssetImage('assets/images/profilePick.jpg'),
         )
       ],
@@ -765,7 +766,10 @@ class BuiltByMeWidget extends StatelessWidget {
                 children: [
                   SizedBox(width: 160, child: SelectableText('This Web App', style: kH4QReg)),
                   customButton(onPressed: () => launchUrl(Uri.parse("https://github.com/Michkwetzel/coffeeEscapades")), buttonText: "Github Repo", color: Colors.white),
-                  customButton(onPressed: () => launchUrl(Uri.parse("https://www.figma.com/design/PJeXa42i9ULRPZxKl07wQq/CoffeeResume?node-id=0-1&t=cqbuK4yo1sSxVaTl-1")), buttonText: "Figma", color: Colors.white)
+                  customButton(
+                      onPressed: () => launchUrl(Uri.parse("https://www.figma.com/design/PJeXa42i9ULRPZxKl07wQq/CoffeeResume?node-id=0-1&t=cqbuK4yo1sSxVaTl-1")),
+                      buttonText: "Figma",
+                      color: Colors.white)
                 ],
               ),
             ],
@@ -799,7 +803,8 @@ class GeneralInfoWidget extends StatelessWidget {
               children: [
                 customButton(onPressed: () => launchUrl(Uri.parse("https://github.com/Michkwetzel")), buttonText: "Github", color: Colors.white),
                 customButton(onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/michkwetzel/")), buttonText: "Linkedin", color: Colors.white),
-                customButton(onPressed: () => launchUrl(Uri.parse("https://drive.google.com/file/d/1cgpQTjcjAayiTv777dVzwhd1CwoN6c6i/view?usp=sharing")), buttonText: "Download CV", color: Colors.white)
+                customButton(
+                    onPressed: () => launchUrl(Uri.parse("https://drive.google.com/file/d/1cgpQTjcjAayiTv777dVzwhd1CwoN6c6i/view?usp=sharing")), buttonText: "Download CV", color: Colors.white)
               ],
             )
           ],
