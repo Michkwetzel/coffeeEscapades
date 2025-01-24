@@ -16,6 +16,7 @@ dependencies:
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
   glassmorphism: ^3.0.0
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +58,23 @@ flutter:
             weight: 500
           - asset: assets/fonts/ChakraPetch/ChakraPetch-Bold.ttf
             weight: 600
+      - family: Qualion
+        fonts:
+          - asset: assets/fonts/qualion/Qualion-Thin.ttf
+            weight: 200
+          - asset: assets/fonts/qualion/Qualion-Regular.ttf
+            weight: 300
+          - asset: assets/fonts/qualion/Qualion-Book.ttf
+            weight: 400
    
   assets:
-    - assets/Flutter_Mike_CV_compressed.pdf
+    - assets/images/flags/
+    - assets/images/fullstack/
+    - assets/images/tools/
+    - assets/images/company/
+    - assets/images/hobbies/
+    - assets/images/
+
+
+
+
