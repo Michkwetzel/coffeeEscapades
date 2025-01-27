@@ -1,9 +1,11 @@
-# coffee_escapades
+## Coffee Escapades
 
-Idea, design and building of this took me roughly 2 days. 
+Fun little CV project.
 
-Flaws: Code is not responsive, doesnt work on mobile and not organized so well.
+The aim of this web app is to showcase LightSpeed coffee - a revolutanary way of making coffee - and tell the viewer a little more of myself.
 
-However: I am currently on a project timeline so can not give this anymore time. Hope it conveyed that I can code though
+At the moment the code is not optimized for mobile and thus not built with Responsive design principals.
 
-Thanks!
+The idea, design and coding took me roughly 2 days.
+
+Have a great day!

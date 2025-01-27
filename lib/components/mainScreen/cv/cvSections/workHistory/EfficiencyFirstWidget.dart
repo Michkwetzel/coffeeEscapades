@@ -35,6 +35,7 @@ class EfficiencyFirstWidget extends StatelessWidget {
             BulletPointRow(text: 'Crafted software product from requirements doc and vision discussion'),
             SizedBox(height: kGeneralSpace),
             Row(
+              crossAxisAlignment:  CrossAxisAlignment.start,
               children: [
                 Expanded(
                   child: Column(
