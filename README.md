@@ -1,16 +1,11 @@
 # coffee_escapades
 
-A new Flutter project.
+Fun little CV project.
 
-## Getting Started
+The aim of this web app is to showcase LightSpeed coffee - a revolutanary way of making coffee - and tell the viewer a little more of myself.
 
-This project is a starting point for a Flutter application.
+At the moment the code is not optimized for mobile and thus not built with Responsive design principals.
 
-A few resources to get you started if this is your first Flutter project:
+The idea, design and coding took me roughly 2 days.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Have a great day!

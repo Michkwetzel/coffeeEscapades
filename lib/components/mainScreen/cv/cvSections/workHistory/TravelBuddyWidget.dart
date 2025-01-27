@@ -28,6 +28,7 @@ class TravelBuddyWidget extends StatelessWidget {
             ),
             SizedBox(height: kGeneralSpace),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   child: Column(

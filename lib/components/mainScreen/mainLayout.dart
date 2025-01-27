@@ -48,7 +48,7 @@ class _MainLayoutState extends ConsumerState<MainLayout> {
                 ),
               );
             },
-            child: !isBrewingFinished ? CVLayout() : LightSpeedCoffeeLayout(cupColor: cupColor, cupSideWidth: cupSideWidth),
+            child: isBrewingFinished ? CVLayout() : LightSpeedCoffeeLayout(cupColor: cupColor, cupSideWidth: cupSideWidth),
           ),
         ),
       ],
