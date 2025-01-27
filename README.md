@@ -1,4 +1,4 @@
-# coffee_escapades
+## Coffee Escapades
 
 Fun little CV project.
 
