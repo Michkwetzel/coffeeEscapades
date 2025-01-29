@@ -22,7 +22,7 @@ class GeneralInfoWidget extends StatelessWidget {
           spacing: 6,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HeadingBodyRow(heading: 'Email:', body: 'michkwetzel@gmail.com', hyperLink: true),
+            HeadingBodyRow(heading: 'Email:', body: 'michkwetzel@gmail.com'),
             HeadingBodyRow(heading: 'Phone:', body: '+27 72 435 8225'),
             PassportRow(),
             HeadingBodyRow(heading: 'Language:', body: 'English, Afrikaans'),

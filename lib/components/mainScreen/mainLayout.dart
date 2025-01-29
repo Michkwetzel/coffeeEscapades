@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:coffee_escapades/components/mainScreen/cVLayout.dart';
-import 'package:coffee_escapades/components/mainScreen/lightSpeedCoffeeLayout.dart';
+import 'package:coffee_escapades/components/mainScreen/cv/cVLayout.dart';
+import 'package:coffee_escapades/components/mainScreen/lightSpeedCoffee/lightSpeedCoffeeLayout.dart';
 import 'package:coffee_escapades/config/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
