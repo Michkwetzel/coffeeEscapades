@@ -22,6 +22,8 @@ class EducationWidget extends StatelessWidget {
               Text('BSc. Engineering in Mechatronics', style: kH2Q),
               Text('University of Cape Town,', style: kH5QReg),
               Text('South Africa', style: kH5QReg),
+              SizedBox(height: 8),
+              Text('Embedded Systems, Robotics, Analog and Digital Electronics, Signals and Systems, Control Theory, Arduino and Raspberry Pi', style: kH5QReg)
             ],
           )),
     );

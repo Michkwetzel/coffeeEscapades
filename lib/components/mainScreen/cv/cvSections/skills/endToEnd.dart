@@ -21,7 +21,7 @@ class EndtoEnd extends StatelessWidget {
           Text("End-to-End Product Development", style: kH2Q),
           Row(children: [
             Flexible(
-              child: Text('Product design, UX Design, Product lifecycle', style: kH5QReg),
+              child: Text('Product Design, UX Design, Product Lifecycle', style: kH5QReg),
             ),
             SizedBox(
               width: 16,

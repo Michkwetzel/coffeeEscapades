@@ -23,7 +23,7 @@ class QuickIntroWidget extends StatelessWidget {
             height: kBetweenHeadingSubSection,
           ),
           Text(
-              'Hi Nunc! I\'m Mike and I\'m a budding Flutter developer. I love good design and clean modular code. My main tech strengths are - knowing how to find out what I don\'t know - and - Project planning/vision -. I am also a very social individual and can connect easily with others. I try and do things that scare me often and love a challenge. Your website and product are pretty awesome. It\'s sleek, it\'s sexy and of course, it\'s coffee.',
+              "Helllooo! I'm Mike and I'm a budding Flutter developer. I love good design and clean modular code. My main tech strengths are: knowing how to find out what I don't know, and solution design. I am also a very social individual and can connect easily with others. I try and do things that scare me often and love a challenge. Excited to see what we can build together.",
               style: kH4QReg)
         ],
       ),

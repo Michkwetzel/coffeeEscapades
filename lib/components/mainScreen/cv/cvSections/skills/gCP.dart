@@ -15,21 +15,25 @@ class GCP extends StatelessWidget {
     return SizedBox(
       width: 500,
       child: ContentCard(
-          child: Column(
-        spacing: 16,
-        children: [
-          Text("Google Cloud Architecture", style: kH2Q),
-          Row(children: [
-            RoundedImage(imagePath: 'assets/images/fullstack/cloud.jpg'),
-            SizedBox(
-              width: kGeneralSpace,
-            ),
-            Flexible(
-              child: Text('Firestore, Authentication, Firebase Hosting, Google Run, Cloud Functions, Local Emulators', style: kH5QReg),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 16,
+          children: [
+            Text("Google Cloud Architecture", style: kH2Q),
+            Row(
+              children: [
+                RoundedImage(imagePath: 'assets/images/fullstack/cloud.jpg'),
+                SizedBox(
+                  width: kGeneralSpace,
+                ),
+                Flexible(
+                  child: Text('Firestore, Authentication, Firebase Hosting, Google Run, Cloud Functions, Local Emulators', style: kH5QReg),
+                )
+              ],
             )
-          ])
-        ],
-      )),
+          ],
+        ),
+      ),
     );
   }
 }
