@@ -18,23 +18,56 @@ class BuiltByMeWidget extends StatelessWidget {
       child: ContentCard(
         heading: 'Built by me:',
         child: Column(
-          spacing: 16,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              spacing: 16,
               children: [
-                SizedBox(width: 160, child: SelectableText('TravelBuddy', style: kH4QReg)),
-                customButton(onPressed: () => launchUrl(Uri.parse("https://travelai-88a07.web.app/")), buttonText: "Home", color: Colors.white)
+                Column(
+                  children: [
+                    SizedBox(width: 175, child: SelectableText('Efficiency-1st', style: kH4QReg)),
+                    SizedBox(width: 175, child: SelectableText('test@gmail.com', style: kH5QReg)),
+                    SizedBox(width: 175, child: SelectableText('Password: 123456', style: kH5QReg)),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        customButton(onPressed: () => launchUrl(Uri.parse("https://dashboard-fdda8.web.app/")), buttonText: "Dashboard", color: Colors.white),
+                        SizedBox(
+                          width: 18,
+                        ),
+                        customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Survey", color: Colors.white),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    customButton(onPressed: () => launchUrl(Uri.parse("https://drive.google.com/drive/folders/1qXbBFx1-CjUmBRxpq1scSCtlQL8mTnvQ?usp=sharing")), buttonText: "File tree", color: Colors.white),
+                  ],
+                ),
               ],
             ),
+            SizedBox(
+              height: 16,
+            ),
             Row(
-              spacing: 16,
               children: [
-                SizedBox(width: 160, child: SelectableText('Efficiency-1st', style: kH4QReg)),
-                customButton(onPressed: () => launchUrl(Uri.parse("https://dashboard-fdda8.web.app/")), buttonText: "Dashboard", color: Colors.white),
-                customButton(onPressed: () => launchUrl(Uri.parse("https://assessment-909ce.web.app/?token2=test&token1=test")), buttonText: "Survey", color: Colors.white)
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(width: 160, child: SelectableText('TravelBuddy', style: kH4QReg)),
+                    SizedBox(width: 175, child: SelectableText('Create an Account', style: kH5QReg)),
+                  ],
+                ),
+                customButton(onPressed: () => launchUrl(Uri.parse("https://travelai-88a07.web.app/")), buttonText: "Home", color: Colors.white),
               ],
+            ),
+            SizedBox(
+              height: 20,
             ),
             Row(
               spacing: 16,

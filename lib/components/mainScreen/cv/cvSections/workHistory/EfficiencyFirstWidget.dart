@@ -29,13 +29,12 @@ class EfficiencyFirstWidget extends StatelessWidget {
               location: 'Remote, USA',
             ),
             SizedBox(height: kGeneralSpace),
-            BulletPointRow(text: 'Solo development of full-stack MVP'),
-            BulletPointRow(text: 'Led end-to-end project planning, system design, and implementation'),
-            BulletPointRow(text: 'UX/UI designed on Figma before implementation'),
-            BulletPointRow(text: 'Crafted software product from requirements doc and vision discussion'),
+            BulletPointRow(text: 'Solo developer responsible for full implementation of the company\'s MVP, now in production.'),
+            BulletPointRow(text: 'Led end-to-end project planning, UI design, system design and execution'),
+            BulletPointRow(text: 'Led company rebranding through collaborative design workshops, establishing brand colors, logo and company values'),
             SizedBox(height: kGeneralSpace),
             Row(
-              crossAxisAlignment:  CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   child: Column(
@@ -44,8 +43,8 @@ class EfficiencyFirstWidget extends StatelessWidget {
                     children: [
                       Text('Back-end', style: kH4QReg),
                       SizedBox(height: 8),
-                      BulletPointRow(text: 'Database: Firestore'),
-                      BulletPointRow(text: 'Language: Python'),
+                      BulletPointRow(text: 'Firestore'),
+                      BulletPointRow(text: 'Python'),
                       BulletPointRow(text: 'Hosted on Google Cloud Functions'),
                       BulletPointRow(text: 'Used Local Emulator before deployment'),
                     ],
