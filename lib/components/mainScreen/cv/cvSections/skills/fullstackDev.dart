@@ -25,7 +25,11 @@ class FullStackDev extends StatelessWidget {
               style: kH2Q,
             ),
             SelectableText(
-              'Flutter, Dart, Python, Java, Figma',
+              'Proficient: Flutter, Dart, Python, Figma',
+              style: kH5QReg,
+            ),
+            SelectableText(
+              'Experience: C++, Java, Matlab, Julia, Assembly',
               style: kH5QReg,
             ),
             Row(

@@ -21,6 +21,17 @@
     "framework": "flutter",
     "frameworksBackend": {
       "region": "europe-west1"
-    }
+    },
+    "headers": [
+      {
+        "source": "**/*.{html,js,css}",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
   }
 }

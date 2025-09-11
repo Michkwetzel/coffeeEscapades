@@ -19,7 +19,7 @@ class GeneralInfoWidget extends StatelessWidget {
       child: ContentCard(
         heading: 'General Info:',
         child: Column(
-          spacing: 6,
+          spacing: 8,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeadingBodyRow(heading: 'Email:', body: 'michkwetzel@gmail.com'),
@@ -27,11 +27,14 @@ class GeneralInfoWidget extends StatelessWidget {
             PassportRow(),
             HeadingBodyRow(heading: 'Language:', body: 'English, Afrikaans'),
             HeadingBodyRow(heading: 'Location:', body: 'Cape Town but willing to move'),
+            SizedBox(
+              height: 2,
+            ),
             Row(
               spacing: 8,
               children: [
                 customButton(
-                  onPressed: () => launchUrl(Uri.parse("https://drive.google.com/file/d/1cgpQTjcjAayiTv777dVzwhd1CwoN6c6i/view?usp=sharing")),
+                  onPressed: () => launchUrl(Uri.parse("https://drive.google.com/drive/folders/1jDQvBBMNCisvS1ibdmVVcbqWDHGfaNur?usp=sharing")),
                   buttonText: "CV",
                   color: Colors.white,
                 ),
@@ -41,8 +44,16 @@ class GeneralInfoWidget extends StatelessWidget {
                   color: Colors.white,
                   actionButton: true,
                 ),
-                customButton(onPressed: () => launchUrl(Uri.parse("https://github.com/Michkwetzel")), buttonText: "Github", color: Colors.white),
-                customButton(onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/michkwetzel/")), buttonText: "Linkedin", color: Colors.white),
+                customButton(
+                  onPressed: () => launchUrl(Uri.parse("https://github.com/Michkwetzel")),
+                  buttonText: "Github",
+                  color: Colors.white,
+                ),
+                customButton(
+                  onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/michkwetzel/")),
+                  buttonText: "Linkedin",
+                  color: Colors.white,
+                ),
               ],
             )
           ],

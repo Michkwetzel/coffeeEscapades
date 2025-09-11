@@ -13,49 +13,55 @@ class BootcampWidget extends StatelessWidget {
     return SizedBox(
       width: 500,
       height: 450,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Bootcamps',
-            style: kH2Q,
-          ),
-          SizedBox(
-            height: 32,
-          ),
-          Row(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+      child: Padding(
+        padding: EdgeInsets.only(left: 8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Bootcamps',
+              style: kH2Q,
+            ),
+            SizedBox(
+              height: 32,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 32),
+              child: Row(
                 children: [
-                  Text('Flutter Bootcamp', style: kH4QReg),
-                  SizedBox(height: 4),
-                  Text('London App Brewery', style: kH5QReg),
-                  SizedBox(height: 20),
-                  Text('Intro to Pandas', style: kH4QReg),
-                  SizedBox(height: 4),
-                  Text('Kaggle', style: kH5QReg),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Flutter Bootcamp', style: kH4QReg),
+                      SizedBox(height: 4),
+                      Text('London App Brewery', style: kH5QReg),
+                      SizedBox(height: 20),
+                      Text('Intro to Pandas', style: kH4QReg),
+                      SizedBox(height: 4),
+                      Text('Kaggle', style: kH5QReg),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Deeplearning', style: kH4QReg),
+                      SizedBox(height: 4),
+                      Text('Coursera', style: kH5QReg),
+                      SizedBox(height: 20),
+                      Text('Machine learning', style: kH4QReg),
+                      SizedBox(height: 4),
+                      Text('Kaggle', style: kH5QReg),
+                    ],
+                  ),
                 ],
               ),
-              SizedBox(
-                width: 40,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Deeplearning', style: kH4QReg),
-                  SizedBox(height: 4),
-                  Text('Coursera', style: kH5QReg),
-                  SizedBox(height: 20),
-                  Text('Machine learning', style: kH4QReg),
-                  SizedBox(height: 4),
-                  Text('Kaggle', style: kH5QReg),
-                ],
-              ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

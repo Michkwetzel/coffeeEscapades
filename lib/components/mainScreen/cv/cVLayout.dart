@@ -59,7 +59,6 @@ class CVLayout extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         EducationWidget(),
-                        SizedBox(height: 32),
                         BootcampWidget(),
                       ],
                     )
